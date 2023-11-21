@@ -27,4 +27,27 @@ export default class AppClass extends Component{
   }
 
   // code here
+  render(){
+    const  array = this.imageData()
+    
+    return(
+      <div>
+        
+        <h1 id="heading">Kalvium gallary</h1>
+        <div className='imgcontainer'>
+        {array.map((images) => (
+        
+          <div key={images.id}>
+            <img className="images" src={images.img} alt="" />
+          </div>
+        ))}
+    
+          
+        
+        </div>
+      </div>
+    )
+  }
+
 }
+
